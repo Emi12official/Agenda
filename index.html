@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="./style.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agenda</title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="titulo">
+                <h1>Agenda</h1>
+            </div>
+            <div class="listado">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body"></tbody>
+                </table>
+            </div>
+            <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Agregar tarea
+            </button>
+        </div>
+        <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Agregar tarea
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <!--Cuerpo del modal-->
+                    <div class="modal-body">
+                        <label class="form-label" for="">Descripción:</label>
+                        <input
+                            class="form-control mb-2"
+                            type="text"
+                            placeholder="Ingrese tarea"
+                            id="descripcion" />
+                        <label class="form-label" for="">Fecha fin:</label>
+                        <input
+                            class="form-control"
+                            type="datetime-local"
+                            placeholder="Ingrese fecha de finalización"
+                            id="fechayhora" />
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="añadir"
+                            data-bs-dismiss="modal">
+                            Añadir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>

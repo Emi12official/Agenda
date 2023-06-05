@@ -1,0 +1,24 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    flex-direction: column;
+}
+
+body {
+    background-color: rgb(24,24,24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    background-color: brown;
+    width: 100%;
+    text-align: center;
+}
+
+.listado {
+    color: rgb(240, 240, 240);
+}
